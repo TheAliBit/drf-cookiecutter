@@ -41,7 +41,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "sentry_sdk.integrations.django.middleware.SentryTraceMiddleware",
+    # "sentry_sdk.integrations.django.middleware.SentryTraceMiddleware",
 ]
 
 ROOT_URLCONF = '{{cookiecutter.project_slug}}.urls'
@@ -67,11 +67,11 @@ WSGI_APPLICATION = '{{cookiecutter.project_slug}}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': config('DATABASE_HOST'),
+        'PORT': config('DATABASE_PORT'),
     }
 }
 
@@ -103,4 +103,4 @@ from .config.jwt import *
 from .config.rest_framework import *
 from .config.statics_media import *
 from .config.localization import *
-from .config.sentry_sdk import *
+# from .config.sentry_sdk import *

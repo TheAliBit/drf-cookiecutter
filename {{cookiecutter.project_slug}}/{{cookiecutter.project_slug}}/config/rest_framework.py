@@ -19,5 +19,4 @@ REST_FRAMEWORK = {
         'anon': 10,
         'user': 5
     }
-
 }
