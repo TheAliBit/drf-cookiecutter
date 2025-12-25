@@ -1,10 +1,9 @@
+.venv/
 venv/
 .idea/
 *.pyc
 *.pyo
 .env
 *.swp
-*/migrations/*
-!*/migrations/__init__.py
 *.log
 static_cdn/
