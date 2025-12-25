@@ -1,0 +1,31 @@
+# Python cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Django stuff
+*.sqlite3
+*.log
+
+# Static and media files
+static_cdn/
+
+# Git files
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
