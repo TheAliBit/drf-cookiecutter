@@ -1,8 +1,4 @@
-from datetime import timedelta
-
-from django.core.cache import cache
-from django.utils.timezone import now
-from ipware import get_client_ip
+from datetime import timedelta from django.core.cache import cache from django.utils.timezone import now from ipware import get_client_ip
 from rest_framework.exceptions import Throttled
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 
@@ -283,7 +279,7 @@ class OTPThrottle:
         elif cache.get(user_key):
             if cache.get(user_key) > self.daily_user_rate_limit:
                 self.log_daily_ban_event(with_user_identifier=True)
-            ban_flag = True
+                ban_flag = True
 
         return ban_flag
 
